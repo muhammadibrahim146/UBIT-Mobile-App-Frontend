@@ -2,7 +2,7 @@ import Card from '@/components/Card';
 import CustomButtom from '@/components/CustomButton';
 import CustomText from '@/components/CustomText';
 import Header from '@/components/Header';
-import ProfileCard from '@/components/ProfileCard';
+import ProfileCard from '@/components/profile/profile-card';
 import { ScrollView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 

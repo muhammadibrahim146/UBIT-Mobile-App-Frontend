@@ -1,6 +1,6 @@
 import { MaterialIcons } from '@expo/vector-icons';
 import { Image, View } from 'react-native';
-import CustomText from './CustomText';
+import CustomText from '../CustomText';
 
 const ProfileCard = ({ name }) => {
     return (

@@ -1,9 +1,28 @@
 import Header from '@/components/Header';
-import ProfileCard from '@/components/ProfileCard';
-import { View } from 'react-native';
+import ContactCard from '@/components/profile/contact-card';
+import ProfileCard from '@/components/profile/profile-card';
+import QuickLinksCard from '@/components/profile/quick-links-card';
+import { ScrollView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const HomeScreen = () => {
+    const quickLinks = [
+        {
+            icon: 'description',
+            label: 'Academic Transcripts',
+            onPress: () => { }
+        },
+        {
+            icon: 'school',
+            label: 'Course Registration',
+            onPress: () => { }
+        },
+        {
+            icon: 'credit-card',
+            label: 'Student ID Card',
+            onPress: () => { }
+        }
+    ]
 
     return (
         <SafeAreaView>
@@ -17,7 +36,11 @@ const HomeScreen = () => {
             >
             </View>
             <Header leftIcon={"arrow-back"} rightIcon={"settings"} />
-            <ProfileCard name={"Bilal Ahmed"} />
+            <ScrollView vertical showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingBottom: 60 }}>
+                <ProfileCard name={"Bilal Ahmed"} />
+                <ContactCard data={""} />
+                <QuickLinksCard data={quickLinks} />
+            </ScrollView>
         </SafeAreaView>
     );
 }
