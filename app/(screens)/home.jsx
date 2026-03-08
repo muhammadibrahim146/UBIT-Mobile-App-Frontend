@@ -1,9 +1,9 @@
-import CustomButton from '@/components/CustomButton';
 import CustomText from '@/components/CustomText';
 import AnnoucementCard from '@/components/dashboard/annoucement-card';
 import DashboardBanner from '@/components/dashboard/banner';
 import DashboardCard from '@/components/dashboard/card';
 import DashboardHeader from '@/components/dashboard/header';
+import { MaterialIcons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -57,7 +57,10 @@ const HomeScreen = () => {
 
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginHorizontal: 20, marginVertical: 10 }}>
                     <CustomText style={{ fontSize: 18 }}>Recent Announcements</CustomText>
-                    <CustomButton text="History" icon="chevron-right" style={{ fontSize: 14, color: '#007BFF' }} onPress={() => { }} />
+                    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 5, marginBottom: 4 }}>
+                        <CustomText style={{ fontSize: 14, lineHeight: 15 }} onPress={() => { }} >History</CustomText>
+                        <MaterialIcons name="arrow-forward-ios" size={12} onPress={() => { }} />
+                    </View>
                 </View>
 
                 {announcementsData.map((item, index) => (
