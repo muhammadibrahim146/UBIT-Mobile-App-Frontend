@@ -222,7 +222,7 @@ const ProfileCard = ({ name }) => {
             color: "#800000",
             marginTop: -6,
           }}
-          onPress={() => route.navigate('/edit-screen')}
+          onPress={() => route.navigate('/edit-profile-screen')}
         >
           Edit
         </Text>

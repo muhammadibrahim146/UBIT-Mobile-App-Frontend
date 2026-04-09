@@ -1,8 +1,10 @@
 import { MaterialIcons } from "@expo/vector-icons";
 import { View } from "react-native";
 import CustomText from "./CustomText";
+import { useRouter } from "expo-router";
 
 const Header = ({ leftIcon, rightIcon }) => {
+  const route = useRouter()
   return (
     <View
       style={{
@@ -17,6 +19,7 @@ const Header = ({ leftIcon, rightIcon }) => {
         color="#ffff"
         size={20}
         style={{ paddingTop: 10 }}
+        onPress={()=>route.back()}
       />
       <CustomText
         style={{ fontSize: 20, fontFamily: "Poppins-SemiBold", color: "#ffff" }}
@@ -28,6 +31,7 @@ const Header = ({ leftIcon, rightIcon }) => {
         color="#ffff"
         size={20}
         style={{ paddingTop: 10 }}
+        onPress={()=>route.navigate('/settings-screen')}
       />
     </View>
   );

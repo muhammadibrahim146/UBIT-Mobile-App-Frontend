@@ -2,12 +2,14 @@ import Header from '@/components/Header';
 import ContactCard from '@/components/profile/contact-card';
 import ProfileCard from '@/components/profile/profile-card';
 import QuickLinksCard from '@/components/profile/quick-links-card';
+import { useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 const HomeScreen = () => {
+    const route = useRouter()
     const quickLinks = [
         {
             icon: 'description',
