@@ -1,8 +1,9 @@
 import CustomText from "@/components/CustomText";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Image, TouchableOpacity, View } from "react-native";
-
+import{useRouter} from "expo-router"
 const DashboardHeader = () => {
+   const router = useRouter();
   return (
     <View
       style={{
@@ -40,7 +41,9 @@ const DashboardHeader = () => {
           <CustomText style={{ fontSize: 18 }}>Good Evening, Bilal</CustomText>
         </View>
       </View>
-      <TouchableOpacity onPress={() => {}}>
+      <TouchableOpacity 
+       onPress={() => router.push("/notification")}
+      >
         <MaterialIcons
           name="notifications-none"
           size={26}
